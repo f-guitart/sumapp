@@ -1,6 +1,6 @@
 /**
  * Virtual keyboard for touch screen devices
- * Supports number input for multiplication game
+ * Supports number input for addition and subtraction game
  */
 
 const VirtualKeyboard = {
