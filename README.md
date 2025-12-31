@@ -1,6 +1,6 @@
-# Multiplication Game
+# Addition & Subtraction Game
 
-A browser-based multiplication game designed for children to practice multiplication tables (1×1 to 10×10) with adaptive difficulty and multiple player profiles.
+A browser-based math game designed for children to practice one-digit addition and subtraction with adaptive difficulty and multiple player profiles.
 
 ## Features
 
@@ -27,14 +27,21 @@ A browser-based multiplication game designed for children to practice multiplica
 
 Each level has 10 questions. You need to answer 100% correctly to unlock the next level.
 
+### Problems Covered
+The game includes:
+- **Addition**: All combinations from 0+0 to 9+9 (100 problems)
+- **Subtraction**: All combinations where the result is positive, from 1-0 to 9-9 (55 problems)
+- All numbers are single digits (0-9)
+- All subtraction results are positive (e.g., 7-2, not 2-7)
+
 ### Adaptive Difficulty
-The game tracks your performance for each multiplication (e.g., "7×8"). Multiplications you get wrong more often will appear more frequently in future questions, especially at higher levels. This helps you practice the ones you need to work on most.
+The game tracks your performance for each problem (e.g., "5+3" or "7-2"). Problems you get wrong more often will appear more frequently in future questions, especially at higher levels. This helps you practice the ones you need to work on most.
 
 ### Data Storage
 All data is stored locally in your browser using LocalStorage:
 - Player profiles
 - Current level for each profile
-- Statistics for each multiplication (correct/wrong counts)
+- Statistics for each problem (correct/wrong counts)
 - Last played timestamp
 
 ## Getting Started
@@ -48,13 +55,15 @@ All data is stored locally in your browser using LocalStorage:
 ### File Structure
 
 ```
-multiplication-game/
+sumapp/
 ├── index.html      # Main HTML file
 ├── style.css       # Styling
 ├── main.js         # Game flow and UI
 ├── gameLogic.js    # Game mechanics and adaptive difficulty
 ├── profiles.js     # Profile management
 ├── storage.js      # LocalStorage handling
+├── keyboard.js     # Virtual keyboard component
+├── analytics.js    # Analytics dashboard (admin)
 └── README.md       # This file
 ```
 
@@ -80,7 +89,7 @@ If you prefer to use a `/docs` folder:
 1. **Menu**: Start screen with "Start Game" button
 2. **Profile Selection**: Create a new profile or select an existing one
 3. **Game Play**: 
-   - Answer multiplication questions within the time limit
+   - Answer addition and subtraction questions within the time limit
    - Get immediate feedback on each answer
    - Progress through questions in the level
 4. **Level Complete**: 
@@ -129,5 +138,5 @@ Free to use and modify for personal or educational purposes.
 
 ## Credits
 
-Created as a static web application for practicing multiplication tables with adaptive learning.
+Created as a static web application for practicing one-digit addition and subtraction with adaptive learning.
 
